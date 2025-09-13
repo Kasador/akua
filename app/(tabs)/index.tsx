@@ -1,31 +1,23 @@
-import { StyleSheet } from 'react-native';
+import { Text, View } from 'react-native';
 
 import EditScreenInfo from '@/components/EditScreenInfo';
-import { Text, View } from '@/components/Themed';
 
 export default function TabOneScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+    <View className="flex-1 items-center justify-center bg-white dark:bg-gray-900">
+      <Text className="text-xl font-bold mb-4 text-gray-900 dark:text-white">
+      </Text>
+      <Text className="text-base text-center px-6 text-gray-600 dark:text-gray-300 mb-8">
+        Your React Native Expo app with NativeWind is ready to go!
+      </Text>
+      
+      <View className="w-4/5 h-px bg-gray-200 dark:bg-gray-700 my-8" />
+      
+      {/* <View className="bg-blue-100 dark:bg-blue-900 p-4 rounded-lg mx-6">
+
+      </View> */}
+      
       <EditScreenInfo path="app/(tabs)/index.tsx" />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
-});
