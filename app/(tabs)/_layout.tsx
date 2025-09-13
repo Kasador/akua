@@ -45,7 +45,7 @@ export default function TabLayout() {
           },
           tabBarIcon: ({ color }) => <TabBarIcon name="lightbulb-o" color={color} />,
           headerRight: () => (
-            <Link href="/modal" asChild>
+            <Link href="/add" asChild>
               <Pressable>
                 {({ pressed }) => (
                   <FontAwesome
