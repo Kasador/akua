@@ -7,7 +7,7 @@ import { useClientOnlyValue } from '@/components/useClientOnlyValue';
 import { useColorScheme } from '@/components/useColorScheme';
 import Colors from '@/constants/Colors';
 
-// You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
+// icons for TabIcon - FontAwesome -> https://icons.expo.fyi/
 function TabBarIcon(props: {
   name: React.ComponentProps<typeof FontAwesome>['name'];
   color: string;
@@ -39,17 +39,17 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Casa',
+          title: 'Aprender',
           tabBarLabelStyle: {
             marginTop: 5
           },
-          tabBarIcon: ({ color }) => <TabBarIcon name="plus-circle" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="lightbulb-o" color={color} />,
           headerRight: () => (
             <Link href="/modal" asChild>
               <Pressable>
                 {({ pressed }) => (
                   <FontAwesome
-                    name="info-circle"
+                    name="plus-circle"
                     size={25}
                     color={Colors[colorScheme ?? 'light'].text}
                     style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
